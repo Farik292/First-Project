@@ -1,0 +1,150 @@
+/* ОБНУЛЕНИЕ И БАЗА */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+/* КОНТЕЙНЕР (Ограничитель ширины) */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.jc-end { justify-content: flex-end; }
+.jc-between { justify-content: space-between; }
+
+/* ВЕРХНЯЯ ПАНЕЛЬ (Top Bar) */
+.top-bar {
+    border-bottom: 0.8px solid rgba(0,0,0,0.1);
+    padding: 8px 0;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+}
+
+.top-links a, .lang-selector {
+    text-decoration: none;
+    color: #000;
+    font-size: 11.06px; /* Из твоего скриншота */
+    font-weight: 500;
+    padding: 0 14px;
+    border-right: 0.8px solid #000; /* Линия справа */
+}
+
+.top-links .no-border { border-right: none; }
+
+/* ОСНОВНАЯ НАВИГАЦИЯ */
+.main-nav { padding: 15px 0; }
+
+.logo { font-size: 20px; }
+.logo .bold { font-weight: 800; }
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 14px;
+}
+
+/* КНОПКА ИЗ FIGMA (С твоего скриншота) */
+.btn-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;                    /* Gap: 20px */
+    padding: 14px 15px;           /* Padding: 14px 15px */
+    background: rgba(255, 119, 0, 1); /* Color: rgba(255, 119, 0, 1) */
+    border-radius: 2px;           /* Radius: 2px */
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* ГЛАВНЫЙ БЛОК (Hero Section) */
+.hero {
+  background-image: url('world-map.svg'); /* Путь к картинке */
+    background-repeat: no-repeat;
+    background-position: left center; /* Прижимаем влево, как в макете */
+    background-size: contain;
+}
+/* Левая часть - Vertical Layout из Figma */
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Flow: Vertical */
+    width: 618px;           /* Width: Fill (618px) */
+    gap: 10px;              /* Gap: 10px */
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hero-desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Большая оранжевая кнопка */
+.btn-orange-large {
+    background: #FF7700;
+    color: white;
+    padding: 18px 30px;
+    text-decoration: none;
+    font-weight: 800;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+/* Правая часть - Картинка */
+.hero-image img {
+    max-width: 600px;
+    border-radius: 4px;
+}
+
+.bottom-block {
+  width: 1,264px;
+  height: 120px;
+  gap: 6px;
+}
+
+.mapSeting {
+    width: 1082;
+height: 551;
+top: 125px;
+left: 7px;
+opacity: 1;
+}
+
+.search-box {
+margin-bottom: 8px;
+width: 156px;
+height: 32;
+top: 0.8px;
+left: 0.8px;
+opacity: 1;
+border-radius: 2px;
+}
+
+.stats-desc {
+    align-items: center;
+}
