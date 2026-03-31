@@ -1,4 +1,3 @@
-/* ОБНУЛЕНИЕ И БАЗА */
 * {
     margin: 0;
     padding: 0;
@@ -7,144 +6,184 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #000;
+    color: #333;
 }
 
-/* КОНТЕЙНЕР (Ограничитель ширины) */
 .container {
-    max-width: 1280px;
+    max-width: 1140px; 
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
-.jc-end { justify-content: flex-end; }
-.jc-between { justify-content: space-between; }
-
-/* ВЕРХНЯЯ ПАНЕЛЬ (Top Bar) */
-.top-bar {
-    border-bottom: 0.8px solid rgba(0,0,0,0.1);
-    padding: 8px 0;
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.top-links {
+.header-flex {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.top-links a, .lang-selector {
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+nav a {
     text-decoration: none;
-    color: #000;
-    font-size: 11.06px; /* Из твоего скриншота */
-    font-weight: 500;
-    padding: 0 14px;
-    border-right: 0.8px solid #000; /* Линия справа */
-}
-
-.top-links .no-border { border-right: none; }
-
-/* ОСНОВНАЯ НАВИГАЦИЯ */
-.main-nav { padding: 15px 0; }
-
-.logo { font-size: 20px; }
-.logo .bold { font-weight: 800; }
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+    color: #333;
+    margin: 0 10px;
     font-size: 14px;
 }
 
-/* КНОПКА ИЗ FIGMA (С твоего скриншота) */
-.btn-contact {
+.header-right {
     display: flex;
     align-items: center;
-    gap: 20px;                    /* Gap: 20px */
-    padding: 14px 15px;           /* Padding: 14px 15px */
-    background: rgba(255, 119, 0, 1); /* Color: rgba(255, 119, 0, 1) */
-    border-radius: 2px;           /* Radius: 2px */
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-/* ГЛАВНЫЙ БЛОК (Hero Section) */
-.hero {
-  background-image: url('world-map.svg'); /* Путь к картинке */
-    background-repeat: no-repeat;
-    background-position: left center; /* Прижимаем влево, как в макете */
-    background-size: contain;
-}
-/* Левая часть - Vertical Layout из Figma */
-.hero-content {
-    display: flex;
-    flex-direction: column; /* Flow: Vertical */
-    width: 618px;           /* Width: Fill (618px) */
-    gap: 10px;              /* Gap: 10px */
-}
-
-.hero-content h1 {
-    font-size: 56px;
-    font-weight: 800;
-    line-height: 1.1;
-}
-
-.hero-subtitle {
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.hero-desc {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Большая оранжевая кнопка */
-.btn-orange-large {
-    background: #FF7700;
-    color: white;
-    padding: 18px 30px;
-    text-decoration: none;
-    font-weight: 800;
-    width: fit-content;
-    margin-top: 20px;
-}
-
-/* Правая часть - Картинка */
-.hero-image img {
-    max-width: 600px;
-    border-radius: 4px;
-}
-
-.bottom-block {
-  width: 1,264px;
-  height: 120px;
-  gap: 6px;
-}
-
-.mapSeting {
-    width: 1082;
-height: 551;
-top: 125px;
-left: 7px;
-opacity: 1;
+    gap: 15px;
 }
 
 .search-box {
-margin-bottom: 8px;
-width: 156px;
-height: 32;
-top: 0.8px;
-left: 0.8px;
-opacity: 1;
-border-radius: 2px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #BDC1C6;
+    padding: 4px 8px;
+    border-radius: 2px;
+    width: 212px;
 }
 
-.stats-desc {
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.search-box img {
+    width: 16px;
+    opacity: 0.6;
+}
+
+.btn-contact {
+    background-color: #FF7700;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 2px;
+}
+
+.hero {
+    position: relative;
+    padding: 100px 0;
+    background-image: url('img/map.png'); 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 1082px 551px; 
+    display: flex;
     align-items: center;
+    min-height: 600px;
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 0 0 500px; 
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-quote {
+    display: inline-block;
+    background-color: #FF7700;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+
+.hero-image {
+    flex: 0 0 540px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+
+}
+
+.top-bar {
+    background-color: #f8f9fa; 
+    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 0;
+    font-size: 12px;
+}
+
+.top-bar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left, .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.top-bar a:hover {
+    color: #ff7700;
+}
+
+.divider {
+    color: #ccc;
+    font-weight: 300;
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #333;
+}
+
+.lang-selector img {
+    width: 14px;
+    height: 14px;
 }
